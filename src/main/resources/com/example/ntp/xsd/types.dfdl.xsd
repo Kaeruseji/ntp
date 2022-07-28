@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<schema
+        xmlns="http://www.w3.org/2001/XMLSchema"
+        xmlns:xs="http://www.w3.org/2001/XMLSchema"
+        xmlns:fn="http://www.w3.org/2005/xpath-functions"
+        xmlns:dfdl="http://www.ogf.org/dfdl/dfdl-1.0/"
+        xmlns:ntp="urn:ntp"
+        targetNamespace="urn:ntp"
+        elementFormDefault="unqualified">
+
+    <include schemaLocation="org/apache/daffodil/xsd/DFDLGeneralFormat.dfdl.xsd" />
+
+    <annotation>
+        <appinfo source="http://www.ogf.org/dfdl/">
+            <dfdl:defineFormat name="baseFormat">
+            <dfdl:format
+                    ref="ntp:GeneralFormat"
+                    representation="binary"
+                    byteOrder="bigEndian"
+            />
+            </dfdl:defineFormat>
+            <dfdl:format ref="ntp:baseFormat"/>
+        </appinfo>
+    </annotation>
+    <simpleType name="uint" dfdl:lengthUnits="bits" dfdl:lengthKind="explicit">
+        <restriction base="xs:unsignedInt"/>
+    </simpleType>
+
+    <simpleType name="ntpLI" dfdl:length="2">
+        <restriction base="ntp:uint"/>
+    </simpleType>
+    <simpleType name="ntpVN" dfdl:length="3">
+        <restriction base="ntp:uint"/>
+    </simpleType>
+    <simpleType name="ntpMode" dfdl:length="3">
+        <restriction base="ntp:uint"/>
+    </simpleType>
+    <simpleType name="ntpStratum" dfdl:length="8">
+        <restriction base="ntp:uint"/>
+    </simpleType>
+    <simpleType name="ntpPoll" dfdl:length="8">
+        <restriction base="ntp:uint"/>
+    </simpleType>
+    <simpleType name="ntpPrecision" dfdl:length="8">
+        <restriction base="ntp:uint"/>
+    </simpleType>
+    <simpleType name="ntpRootDelay" dfdl:length="32">
+        <restriction base="ntp:uint"/>
+    </simpleType>
+    <simpleType name="ntpRootDispersion" dfdl:length="32">
+        <restriction base="ntp:uint"/>
+    </simpleType>
+    <simpleType name="ntpReferenceID" dfdl:length="32">
+        <restriction base="ntp:uint"/>
+    </simpleType>
+    <simpleType name="ntpReferenceTimestamp" dfdl:length="64">
+        <restriction base="ntp:uint"/>
+    </simpleType>
+    <simpleType name="ntpOriginTimestamp" dfdl:length="64">
+        <restriction base="ntp:uint"/>
+    </simpleType>
+    <simpleType name="ntpReceiveTimestamp" dfdl:length="64">
+        <restriction base="ntp:uint"/>
+    </simpleType>
+    <simpleType name="ntpTransmitTimestamp" dfdl:length="64">
+        <restriction base="ntp:uint"/>
+    </simpleType>
+    <simpleType name="ntpExtensionField1" dfdl:length="32">
+        <restriction base="ntp:uint"/>
+    </simpleType>
+    <simpleType name="ntpExtensionField2" dfdl:length="32">
+        <restriction base="ntp:uint"/>
+    </simpleType>
+    <simpleType name="ntpKeyIdentifier" dfdl:length="32">
+        <restriction base="ntp:uint"/>
+    </simpleType>
+    <simpleType name="ntpdgst" dfdl:length="128">
+        <restriction base="ntp:uint"/>
+    </simpleType>
+</schema>

@@ -1,0 +1,10 @@
+[debug] > Exec(test, None, None)
+[debug] Evaluating tasks: Test / test
+[debug] Running task... Cancel: Signal, check cycles: false, forcegc: true
+[info] Test run com.example.ntp.TestNtp started
+[info] Test com.example.ntp.TestNtp.test_ntp_01 started
+[info] Test run com.example.ntp.TestNtp finished: 0 failed, 0 ignored, 1 total, 1.553s
+[info] Passed: Total 1, Failed 0, Errors 0, Passed 1
+[debug] Forcing garbage collection...
+[success] Total time: 2 s, completed Jul 27, 2022, 3:26:29 PM
+[debug] > Exec(idea-shell, None, None)

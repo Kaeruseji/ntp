@@ -1,0 +1,7 @@
+[debug] > Exec(all {file:/C:/Users/ericc/Downloads/DFDL/ntp2/ntp/}ntp/products {file:/C:/Users/ericc/Downloads/DFDL/ntp2/ntp/}ntp/test:products, None, None)
+[debug] Evaluating tasks: Compile / products, Test / products
+[debug] Running task... Cancel: Signal, check cycles: false, forcegc: true
+[success] Total time: 2 s, completed Jul 27, 2022, 3:23:44 PM
+[debug] > Exec(idea-shell, None, None)
+[debug] > Exec(, None, None)
+[debug] > Exec(idea-shell, None, None)
